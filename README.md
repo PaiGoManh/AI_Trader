@@ -70,23 +70,23 @@ cd AI_Trader
     ```
 ##Create a .env.local file in the root directory with the following structure (USE YOUR OWN VALUES):
 
-# WalletConnect Configuration
+###  WalletConnect Configuration
 NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=your_walletconnect_project_id_here
 
-# Blockchain Network Configuration
+###  Blockchain Network Configuration
 NEXT_PUBLIC_RPC_URL=your_bsc_rpc_url_here
 NEXT_PUBLIC_CONTRACT_ADDRESS=your_contract_address_here
 
-# API Keys for Market Data
+###  API Keys for Market Data
 NEXT_PUBLIC_COINGECKO_API_KEY=your_coingecko_api_key_here
 COINGECKO_API_KEY=your_coingecko_api_key_here
 
-# AI Services Configuration
+### AI Services Configuration
 NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key_here
 OPENROUTER_API_KEY=your_openrouter_api_key_here
 
-# ⚠️ SECURITY CRITICAL - NEVER SHARE OR COMMIT
-# Use this only for development, remove for production
+###  ⚠️ SECURITY CRITICAL - NEVER SHARE OR COMMIT
+###  Use this only for development, remove for production
 NEXT_PUBLIC_PRIVATE_KEY=your_private_key_here
 
 
