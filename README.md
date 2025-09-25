@@ -37,5 +37,5 @@ Trading AI Assistant is your personal trading mentor that simplifies complex mar
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/your-username/trading-ai-assistant.git
-cd trading-ai-assistant
+git clone https://github.com/PaiGoManh/AI_Trader.git
+cd AI_Trader
