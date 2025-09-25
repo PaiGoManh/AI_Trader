@@ -1,0 +1,29 @@
+# Node modules
+/node_modules
+
+# Compilation output
+/dist
+
+# pnpm deploy output
+/bundle
+
+# Hardhat Build Artifacts
+/artifacts
+
+# Hardhat compilation (v2) support directory
+/cache
+
+# Typechain output
+/types
+
+# Hardhat coverage reports
+/coverage
+
+
+# dotenv environment variables file
+.env    
+.env.*   # Ignore all .env files to avoid committing sensitive information
+# Uncomment the following line if you want to track a specific .env file
+# !.env.example # Example .env file to be tracked
+# Optional npm cache directory
+

@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 174 100% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 174 100% 39%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 174 100% 36%;
+    --chart-1: 174 100% 36%;
+    --chart-2: 0 100% 60%;
+    --chart-3: 174 100% 39%;
+    --chart-4: 193 95% 68%;
+    --chart-5: 39 84% 56%;
+    --radius: 0.5rem;
+    
+    /* Trading-specific colors */
+    --success: 174 100% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 39 84% 56%;
+    --warning-foreground: 26 83% 14%;
+    --danger: 0 100% 60%;
+    --danger-foreground: 210 40% 98%;
+    --info: 221 83% 53%;
+    --info-foreground: 210 40% 98%;
+    
+    /* Market colors */
+    --bull: 174 100% 36%;
+    --bear: 0 100% 60%;
+    --neutral: 215 16% 47%;
+    
+    /* Web3 specific colors */
+    --caribbean-green: 174 100% 36%;
+    --governor-bay: 174 100% 39%;
+    --radical-red: 0 100% 60%;
+  }
+  
+  .dark {
+    --background: 0 0% 100%;
+    --foreground: 210 40% 98%;
+    --card: 0 0% 98%;
+    --card-foreground: 210 40% 98%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 174 100% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 174 100% 39%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 174 100% 36%;
+    --chart-1: 174 100% 36%;
+    --chart-2: 0 100% 60%;
+    --chart-3: 174 100% 39%;
+    --chart-4: 193 95% 68%;
+    --chart-5: 39 84% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+@layer components {
+  /* Trading-specific utilities */
+  .text-bull {
+    color: hsl(var(--caribbean-green));
+  }
+  
+  .text-bear {
+    color: hsl(var(--radical-red));
+  }
+  
+  .bg-bull {
+    background-color: hsl(var(--caribbean-green));
+  }
+  
+  .bg-bear {
+    background-color: hsl(var(--radical-red));
+  }
+  
+  .border-bull {
+    border-color: hsl(var(--caribbean-green));
+  }
+  
+  .border-bear {
+    border-color: hsl(var(--radical-red));
+  }
+  
+  /* Web3 specific utilities */
+  .text-caribbean {
+    color: hsl(var(--caribbean-green));
+  }
+  
+  .text-governor {
+    color: hsl(var(--governor-bay));
+  }
+  
+  .text-radical {
+    color: hsl(var(--radical-red));
+  }
+  
+  .bg-caribbean {
+    background-color: hsl(var(--caribbean-green));
+  }
+  
+  .bg-governor {
+    background-color: hsl(var(--governor-bay));
+  }
+  
+  .bg-radical {
+    background-color: hsl(var(--radical-red));
+  }
+  
+  .border-caribbean {
+    border-color: hsl(var(--caribbean-green));
+  }
+  
+  .border-governor {
+    border-color: hsl(var(--governor-bay));
+  }
+  
+  .border-radical {
+    border-color: hsl(var(--radical-red));
+  }
+  
+  /* Animation utilities */
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+  
+  /* Dashboard grid */
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    min-height: calc(100vh - 4rem);
+  }
+  
+  /* Trading card styles */
+  .trading-card {
+    @apply bg-card border border-border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow;
+  }
+  
+  /* Number formatting */
+  .price-positive {
+    color: hsl(var(--caribbean-green));
+    font-weight: 500;
+  }
+  
+  .price-negative {
+    color: hsl(var(--radical-red));
+    font-weight: 500;
+  }
+  
+  .price-neutral {
+    @apply text-muted-foreground font-medium;
+  }
+}
+
+/* Loading animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 200px 100%;
+}
+
+/* Chart styles */
+.recharts-tooltip-content {
+  @apply bg-card border border-border rounded-md shadow-lg !important;
+}
+
+.recharts-legend-item-text {
+  @apply text-foreground !important;
+}
+
+/* Custom focus styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
+}
